@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách dự án</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="../styles/project_list.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="header__overlay"></div>
+        <div class="nav">
+            <div class="nav__logo">
+                <a href=""><img src="../assets/logo-white.png" alt=""></a>
+            </div>
+            <div class="nav__link">
+                <a class="nav__link-element">Trang chủ</a>
+                <a class="nav__link-element">Về chúng tôi</a>
+                <a class="nav__link-element">Dự án</a>
+                <a class="nav__link-element">Blog</a>
+                <a class="nav__link-element">Liên Hệ</a>
+            </div>
+
+        </div>
+        <!-- <div class="header__elements">
+            <div class="header__elements-h1">Bất động sản</div>
+            <div class="header__elements-h2">link invest</div>
+            <button>Tìm Hiểu Ngay</button>
+        </div> -->
+    </section>
+    <section class="header__mobile">
+        <div class="header__nav-wrap">
+            <p class="header__mobile-title">công ty cổ phần thương mại trực tuyến an thịnh phát </p>
+            <div class="header__mobile-nav">
+                <img src="../assets/logo.png" alt="">
+                <i class="fa-solid fa-bars-sort" id="menuBar"></i>
+            </div>
+        </div>
+        <div class="header__mobile-content">
+            <div class="overlay"></div>
+            <div class="header__mobile-content-main">
+                <p class="title1">bất động sản</p>
+                <p class="title2">linkinvest</p>
+                <button>tìm hiểu ngay</button>
+                <div class="header__mobile-search">
+                    <div class="header__mobile-search-tab">
+                        <div class="tab tab1 tab--active">Đầu tư</div>
+                        <div class="tab tab2">Chung cư</div>
+                    </div>
+                    <div class="header__mobile-search-content">
+                        <div class="search-container__search-bar">
+                            <input type="text" placeholder="Nhập thông tin tìm kiếm"
+                                class="search-container__search-input">
+                        </div>
+                        <div class="search-container__filters">
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Khu vực</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Tất cả địa điểm">Tất cả địa
+                                            điểm</span>
+                                        <span class="custom-select__option" data-value="Hà Nội">Hà Nội</span>
+                                        <span class="custom-select__option" data-value="Hồ Chí Minh">Hồ Chí Minh</span>
+                                        <span class="custom-select__option" data-value="Bình Dương">Bình Dương</span>
+                                        <span class="custom-select__option" data-value="Bắc Ninh">Bắc Ninh</span>
+                                        <span class="custom-select__option" data-value="Đồng Nai">Đồng Nai</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Mức giá</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Dưới 1 tỷ">Dưới 1 tỷ</span>
+                                        <span class="custom-select__option" data-value="1-2 tỷ">1-2 tỷ</span>
+                                        <span class="custom-select__option" data-value="2-3 tỷ">2-3 tỷ</span>
+                                        <span class="custom-select__option" data-value="Trên 3 tỷ">Trên 3 tỷ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Trạng thái</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Đang mở bán">Đang mở bán</span>
+                                        <span class="custom-select__option" data-value="Đã bàn giao">Đã bàn giao</span>
+                                        <span class="custom-select__option" data-value="Sắp mở bán">Sắp mở bán</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="search-container__search-button">Tìm kiếm</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobile__menu" id="mobile__menu">
+        <div class="mobile__menu-link"><i class="fa-solid fa-house-chimney"></i>Trang chủ</div>
+        <div class="mobile__menu-link"><i class="fa-brands fa-staylinked"></i>Về chúng tôi</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-buildings"></i></i>Dự án</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-memo-pad"></i>Blog</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-phone-volume"></i>Liên hệ</div>
+        <div class="mobile__menu-footer">
+            <p>Kết nối với chúng tôi</p>
+            <div class="logo-wrap">
+                <a href="">
+                    <img src="../assets/footer-facebook.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-tiktok.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-youtube.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-zalo.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-mail.svg" alt="" /></a>
+
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <div class="search__tabs">
+            <div class="search__tab search__tab--active">Đầu tư</div>
+            <div class="search__tab">Chung cư</div>
+        </div>
+        <div class="search-container">
+            <div class="search-container__search-bar">
+                <input type="text" placeholder="Nhập thông tin tìm kiếm" class="search-container__search-input">
+                <button class="search-container__search-button">Tìm kiếm</button>
+            </div>
+            <div class="search-container__filters">
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Khu vực</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Tất cả địa điểm">Tất cả địa điểm</span>
+                            <span class="custom-select__option" data-value="Hà Nội">Hà Nội</span>
+                            <span class="custom-select__option" data-value="Hồ Chí Minh">Hồ Chí Minh</span>
+                            <span class="custom-select__option" data-value="Bình Dương">Bình Dương</span>
+                            <span class="custom-select__option" data-value="Bắc Ninh">Bắc Ninh</span>
+                            <span class="custom-select__option" data-value="Đồng Nai">Đồng Nai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Mức giá</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Dưới 1 tỷ">Dưới 1 tỷ</span>
+                            <span class="custom-select__option" data-value="1-2 tỷ">1-2 tỷ</span>
+                            <span class="custom-select__option" data-value="2-3 tỷ">2-3 tỷ</span>
+                            <span class="custom-select__option" data-value="Trên 3 tỷ">Trên 3 tỷ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Trạng thái</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Đang mở bán">Đang mở bán</span>
+                            <span class="custom-select__option" data-value="Đã bàn giao">Đã bàn giao</span>
+                            <span class="custom-select__option" data-value="Sắp mở bán">Sắp mở bán</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="gap__navigation">
+        <div class="gap__navigation-content">
+            <a href="" class="gap__navigation-content-link">Trang chủ</a>
+            <i class="fa-regular fa-greater-than"></i>
+            <a href="" class="gap__navigation-content-link gap__navigation-content-link--active">Dự án</a>
+        </div>
+    </section>
+    <section class="project">
+        <div class="project__tab">
+            <div class="project__title">Dự án</div>
+            <div class="project__tab-wrap">
+                <div class="project__tab-element project__tab-element--active">Tất cả</div>
+                <div class="project__tab-element">Đầu tư</div>
+                <div class="project__tab-element">Chung cư</div>
+            </div>
+        </div>
+        <div class="project__wrap">
+            <div class="project__element">
+                <img class="project__img" src="../assets/project-1.png">
+                <div class="project__info">
+                    <div class="project__info-name">Dự án Danko Avenue Sông Công</div>
+                    <div class="project__info-time"><i class="fa-solid fa-calendars"></i>07/05/2024</div>
+                    <div class="project__info-detail">
+                        Danko Avenue Sông Công – khu đô thị mặt đường Thắng Lợi kéo dài tọa lạc tại khu công nghiệp mới
+                        phát triển nhất tại
+                        Thành phố Thái Nguyên, dự kiến dự án sẽ có tổng vốn đầu tư khoảng , với quy mô vào khoảng 18
+                        hécta, với khoảng 536 sản
+                        phẩm bất động sản cao cấp, với điểm nhất là dãy Shophouse + khu biệt thự siêu sang và hàng ngàn
+                        tiện ích vượt trội khác.
+                    </div>
+                    <a href="" class="project__info-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="project__element">
+                <img class="project__img" src="../assets/project-1.png">
+                <div class="project__info">
+                    <div class="project__info-name">Dự án Danko Avenue Sông Công</div>
+                    <div class="project__info-time"><i class="fa-solid fa-calendars"></i>07/05/2024</div>
+                    <div class="project__info-detail">
+                        Danko Avenue Sông Công – khu đô thị mặt đường Thắng Lợi kéo dài tọa lạc tại khu công nghiệp mới
+                        phát triển nhất tại
+                        Thành phố Thái Nguyên, dự kiến dự án sẽ có tổng vốn đầu tư khoảng , với quy mô vào khoảng 18
+                        hécta, với khoảng 536 sản
+                        phẩm bất động sản cao cấp, với điểm nhất là dãy Shophouse + khu biệt thự siêu sang và hàng ngàn
+                        tiện ích vượt trội khác.
+                    </div>
+                    <a href="" class="project__info-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="project__element">
+                <img class="project__img" src="../assets/project-1.png">
+                <div class="project__info">
+                    <div class="project__info-name">Dự án Danko Avenue Sông Công</div>
+                    <div class="project__info-time"><i class="fa-solid fa-calendars"></i>07/05/2024</div>
+                    <div class="project__info-detail">
+                        Danko Avenue Sông Công – khu đô thị mặt đường Thắng Lợi kéo dài tọa lạc tại khu công nghiệp mới
+                        phát triển nhất tại
+                        Thành phố Thái Nguyên, dự kiến dự án sẽ có tổng vốn đầu tư khoảng , với quy mô vào khoảng 18
+                        hécta, với khoảng 536 sản
+                        phẩm bất động sản cao cấp, với điểm nhất là dãy Shophouse + khu biệt thự siêu sang và hàng ngàn
+                        tiện ích vượt trội khác.
+                    </div>
+                    <a href="" class="project__info-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="project__element">
+                <img class="project__img" src="../assets/project-1.png">
+                <div class="project__info">
+                    <div class="project__info-name">Dự án Danko Avenue Sông Công</div>
+                    <div class="project__info-time"><i class="fa-solid fa-calendars"></i>07/05/2024</div>
+                    <div class="project__info-detail">
+                        Danko Avenue Sông Công – khu đô thị mặt đường Thắng Lợi kéo dài tọa lạc tại khu công nghiệp mới
+                        phát triển nhất tại
+                        Thành phố Thái Nguyên, dự kiến dự án sẽ có tổng vốn đầu tư khoảng , với quy mô vào khoảng 18
+                        hécta, với khoảng 536 sản
+                        phẩm bất động sản cao cấp, với điểm nhất là dãy Shophouse + khu biệt thự siêu sang và hàng ngàn
+                        tiện ích vượt trội khác.
+                    </div>
+                    <a href="" class="project__info-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="project__pagination pagination">
+            <button class="pagi-prev"><i class="fa-solid fa-chevron-left"></i></i></button>
+            <button class="pagi-number pagi-number--active">1</button>
+            <button class="pagi-number">2</button>
+            <button class="pagi-number">3</button>
+            <button class="pagi-number">4</button>
+            <button class="pagi-number">5</button>
+            <button class="pagi-next"><i class="fa-solid fa-chevron-right"></i></i></button>
+        </div>
+
+    </section>
+    <section class="get-infor">
+        <div class="get-infor-container">
+            <div>
+                <img src="../assets/get-info-mail.svg" alt="" />
+                <p>ĐĂNG KÝ NHẬN TIN</p>
+            </div>
+            <div class="email">
+                <input type="text" placeholder="Nhập email của bạn" />
+                <div class="img-border">
+                    <img src="../assets/get-info-clippathgroup.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="download">
+            <img src="../assets/footer-logo.svg" alt="" />
+            <div class="download-app">
+                <p>Ứng dụng tải xuống</p>
+                <div>
+                    <img src="../assets/footer-appstore.svg" alt="" />
+                    <img src="../assets/footer-googleplay.svg" alt="" />
+                </div>
+                <img src="../assets/footer-qr.svg" alt="" />
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="company-info">
+                <h6 class="company-name">CÔNG TY CỔ PHẦN THƯƠNG MẠI TRỰC TUYẾN AN THỊNH PHÁT</h6>
+                <div class="company-info-item">
+                    <img src="../assets/footer-position.svg" alt="" />
+                    <div>
+                        <p class="address">Địa chỉ</p>
+                        <p class="detail">
+                            Thôn Ngũ Xã, xã Vĩnh Xá, H. Kim Động, Tỉnh Hưng Yên
+                        </p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="../assets/footer-position.svg" alt="" />
+                    <div>
+                        <p class="address">Trụ sở chính</p>
+                        <p class="detail">
+                            Toà nhà TSQ Euroland, Nguyễn Văn Lộc, P. Mộ Lao Q. Hà Đông, Tp.
+                            Hà Nội
+                        </p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="../assets/footer-phone.svg" alt="" />
+                    <div>
+                        <p class="detail">0918871984</p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="../assets/footer-email.svg" alt="" />
+                    <div>
+                        <p class="detail">linkinvest@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h6>DANH MỤC VỀ LINKINVEST</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Giới thiệu</a>
+                    <a class="item" href="">Liên hệ</a>
+                    <a class="item" href="">Chính sách bảo mật</a>
+                    <a class="item" href="">Điều khoản dịch vụ</a>
+                    <a class="item" href="">Quy chế hoạt động</a>
+                </nav>
+            </div>
+
+            <div class="project-position">
+                <h6>DỰ ÁN THEO KHU VỰC</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Bắc Giang</a>
+                    <a class="item" href="">Phú Yên</a>
+                    <a class="item" href="">Quảng Ninh</a>
+                    <a class="item" href="">Hà Nội</a>
+                    <a class="item view" href="">Xem tất cả
+                        <i class="fa-solid fa-arrow-right"></i> </a>
+                </nav>
+            </div>
+
+            <div class="new">
+                <h6>TIN TỨC THEO CHỦ ĐỀ</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Tin nổi bật</a>
+                    <a class="item" href="">Tin Hà Nội</a>
+                    <a class="item" href="">Tin Hồ Chí Minh</a>
+                    <a class="item" href="">Kiến thức đầu tư</a>
+                    <a class="item view" href="">Xem thêm
+                        <i class="fa-solid fa-arrow-right"></i> </a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="powered-by">
+                <p>Giấy phép đăng ký kinh doanh số: <span>0901100874</span></p>
+                <p>
+                    Copyright &copy; 2024 <span>LINKINVEST</span>. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social-contact">
+                <p>Kết nối với chúng tôi</p>
+                <nav class="social-icon">
+                    <a href="">
+                        <img src="../assets/footer-facebook.svg" alt="" /></a>
+                    <a href="">
+                        <img src="../assets/footer-tiktok.svg" alt="" /></a>
+                    <a href="">
+                        <img src="../assets/footer-youtube.svg" alt="" /></a>
+                    <a href="">
+                        <img src="../assets/footer-zalo.svg" alt="" /></a>
+                    <a href="">
+                        <img src="../assets/footer-mail.svg" alt="" /></a>
+                </nav>
+            </div>
+            <div class="certi">
+                <div class="certi1">
+                    <img src="../assets/footer-google.svg" alt="" />
+                    <div>
+                        <p>For Starups Accelerator 2020</p>
+                    </div>
+                    <img src="../assets/footer-dmca.svg" alt="" />
+                </div>
+                <img src="../assets/footer-certificate.svg" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.custom-select-wrapper').forEach((wrapper) => {
+            const select = wrapper.querySelector('.custom-select');
+            const trigger = select.querySelector('.custom-select__trigger');
+            const options = select.querySelectorAll('.custom-select__option');
+
+            trigger.addEventListener('click', () => {
+                select.classList.toggle('custom-select--open');
+            });
+
+            options.forEach((option) => {
+                option.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const selectedOption = select.querySelector('.custom-select__option--selected');
+                    if (selectedOption) {
+                        selectedOption.classList.remove('custom-select__option--selected');
+                    }
+                    option.classList.add('custom-select__option--selected');
+                    trigger.querySelector('span').textContent = option.textContent;
+                    select.classList.remove('custom-select--open');
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!select.contains(event.target)) {
+                    select.classList.remove('custom-select--open');
+                }
+            });
+        });
+
+        var menuBar = document.getElementById("mobile__menu");
+        var toggleMenuButton = document.getElementById("menuBar");
+
+        toggleMenuButton.addEventListener("click", function () {
+            if (menuBar.style.right === "0px") {
+                menuBar.style.right = "-80vw";
+            } else {
+                menuBar.style.right = "0";
+            }
+        });
+    </script>
+</body>

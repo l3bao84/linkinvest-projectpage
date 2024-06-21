@@ -1,0 +1,94 @@
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+$white-color: #ffffff;
+$blue-color: #06aeff;
+$dark-blue-color: #1868b3;
+$banner-color: #f7941d;
+$yellow-color: #f7941d;
+$gray-color: #828282;
+$gray-border-color: #dce0e0;
+$sf-font: "OriginFont", sans-serif;
+$gray-text-color: #201c1c;
+$gray-background-color: #f6f7f8;
+$blue-active-color: #004274;
+$black-color: #000000;
+
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Regular.otf"); 
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Bold.otf");
+  font-weight: bold; 
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Medium.otf");
+  font-weight: 500; 
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Semibold.otf");
+  font-weight: 600; 
+}
+
+
+// _base.scss
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: "Inter", sans-serif;
+$border-color: #ccc;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: $breakpoint-xlarge) {
+      @content;
+    }
+  }
+}
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button($padding, $bg-color, $font-size, $color) {
+  background-color: $bg-color;
+  padding: $padding;
+  text-transform: uppercase;
+  font-size: $font-size;
+  color: $color;
+  border: none;
+}
+
+@mixin top {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: $sf-font;
+}

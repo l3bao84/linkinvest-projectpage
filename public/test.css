@@ -1,0 +1,53 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.range-slider {
+    position: relative;
+    width: 300px;
+}
+
+input[type=range] {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 8px;
+    margin: 0;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.slider-track {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.slider-values {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+}

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="header__overlay"></div>
+        <div class="nav">
+            <div class="nav__logo">
+                <a href=""><img id="nav-logo" src="./assets/logo-white.png" alt=""></a>
+            </div>
+            <div class="nav__link">
+                <a href='' class="nav__link-element">Trang chủ</a>
+                <a href='' class="nav__link-element">Về chúng tôi</a>
+                <a href='' class="nav__link-element">Dự án</a>
+                <a href='' class="nav__link-element">Blog</a>
+                <a href='' class="nav__link-element">Liên Hệ</a>
+            </div>
+
+        </div>
+        <div class="header__elements">
+            <div class="header__elements-h1">Bất động sản</div>
+            <div class="header__elements-h2">link invest</div>
+            <button>Tìm Hiểu Ngay</button>
+        </div>
+    </section>
+    <section class="header__mobile">
+        <div class="header__nav-wrap">
+            <p class="header__mobile-title">công ty cổ phần thương mại trực tuyến<br> an thịnh phát </p>
+            <div class="header__mobile-nav">
+                <img src="./assets/logo.png" alt="">
+                <i class="fa-solid fa-bars-sort" id="menuBar"></i>
+                <i class="fa-solid fa-xmark" id="closeBar" style="display: none;"></i>
+            </div>
+        </div>
+        <div class="header__mobile-content">
+            <div class="overlay"></div>
+            <div class="header__mobile-content-main">
+                <p class="title1">bất động sản</p>
+                <p class="title2">linkinvest</p>
+                <button>tìm hiểu ngay</button>
+                <div class="header__mobile-search">
+                    <div class="header__mobile-search-tab">
+                        <div class="tab tab1 tab--active">Đầu tư</div>
+                        <div class="tab tab2">Chung cư</div>
+                    </div>
+                    <div class="header__mobile-search-content">
+                        <div class="search-container__search-bar">
+                            <input type="text" placeholder="Nhập thông tin tìm kiếm"
+                                class="search-container__search-input">
+                        </div>
+                        <div class="search-container__filters">
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Khu vực</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Tất cả địa điểm">Tất cả địa
+                                            điểm</span>
+                                        <span class="custom-select__option" data-value="Hà Nội">Hà Nội</span>
+                                        <span class="custom-select__option" data-value="Hồ Chí Minh">Hồ Chí Minh</span>
+                                        <span class="custom-select__option" data-value="Bình Dương">Bình Dương</span>
+                                        <span class="custom-select__option" data-value="Bắc Ninh">Bắc Ninh</span>
+                                        <span class="custom-select__option" data-value="Đồng Nai">Đồng Nai</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Mức giá</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Dưới 1 tỷ">Dưới 1 tỷ</span>
+                                        <span class="custom-select__option" data-value="1-2 tỷ">1-2 tỷ</span>
+                                        <span class="custom-select__option" data-value="2-3 tỷ">2-3 tỷ</span>
+                                        <span class="custom-select__option" data-value="Trên 3 tỷ">Trên 3 tỷ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>Trạng thái</span>
+                                        <div class="custom-select__arrow"></div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <span class="custom-select__option" data-value="Đang mở bán">Đang mở bán</span>
+                                        <span class="custom-select__option" data-value="Đã bàn giao">Đã bàn giao</span>
+                                        <span class="custom-select__option" data-value="Sắp mở bán">Sắp mở bán</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="search-container__search-button">Tìm kiếm</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobile__menu" id="mobile__menu">
+        <div class="mobile__menu-link"><i class="fa-solid fa-house-chimney"></i>Trang chủ</div>
+        <div class="mobile__menu-link"><i class="fa-brands fa-staylinked"></i>Về chúng tôi</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-buildings"></i></i>Dự án</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-memo-pad"></i>Blog</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-phone-volume"></i>Liên hệ</div>
+        <div class="mobile__menu-footer">
+            <p>Kết nối với chúng tôi</p>
+            <div class="logo-wrap">
+                <a href="">
+                    <img src="./assets/footer-facebook.svg" alt="" /></a>
+                <a href="">
+                    <img src="./assets/footer-tiktok.svg" alt="" /></a>
+                <a href="">
+                    <img src="./assets/footer-youtube.svg" alt="" /></a>
+                <a href="">
+                    <img src="./assets/footer-zalo.svg" alt="" /></a>
+                <a href="">
+                    <img src="./assets/footer-mail.svg" alt="" /></a>
+
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <div class="search__tabs">
+            <div class="search__tab search__tab--active">Đầu tư</div>
+            <div class="search__tab">Chung cư</div>
+        </div>
+        <div class="search-container">
+            <div class="search-container__search-bar">
+                <input type="text" placeholder="Nhập thông tin tìm kiếm" class="search-container__search-input">
+                <button class="search-container__search-button">Tìm kiếm</button>
+            </div>
+            <div class="search-container__filters">
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Khu vực</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Tất cả địa điểm">Tất cả địa điểm</span>
+                            <span class="custom-select__option" data-value="Hà Nội">Hà Nội</span>
+                            <span class="custom-select__option" data-value="Hồ Chí Minh">Hồ Chí Minh</span>
+                            <span class="custom-select__option" data-value="Bình Dương">Bình Dương</span>
+                            <span class="custom-select__option" data-value="Bắc Ninh">Bắc Ninh</span>
+                            <span class="custom-select__option" data-value="Đồng Nai">Đồng Nai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Mức giá</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Dưới 1 tỷ">Dưới 1 tỷ</span>
+                            <span class="custom-select__option" data-value="1-2 tỷ">1-2 tỷ</span>
+                            <span class="custom-select__option" data-value="2-3 tỷ">2-3 tỷ</span>
+                            <span class="custom-select__option" data-value="Trên 3 tỷ">Trên 3 tỷ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span>Trạng thái</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__options">
+                            <span class="custom-select__option" data-value="Đang mở bán">Đang mở bán</span>
+                            <span class="custom-select__option" data-value="Đã bàn giao">Đã bàn giao</span>
+                            <span class="custom-select__option" data-value="Sắp mở bán">Sắp mở bán</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="menubar">
+        <a href=""><i class="fa-solid fa-house"></i></a>
+        <a href=""><i class="fa-solid fa-note-sticky"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+        <a href=""><i class="fa-solid fa-image"></i></a>
+        <a href=""><i class="fa-solid fa-gear"></i></a>
+        <a href=""><i class="fa-solid fa-wifi"></i></a>
+        <a href=""><i class="fa-solid fa-phone-volume"></i></a>
+    </section>
+    <section class="portfolio">
+        <div class="slider">
+            <h2 class="slider__title">DỰ ÁN TIÊU BIỂU</h2>
+            <div class="slider__more"><a href="#">XEM THÊM <i class="fa-solid fa-arrow-right"></i></a></div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-1.png" alt="Image 1"></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-2.png" alt="Image 2"></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-3.png" alt="Image 3"></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-1.png" alt="Image 1"></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-2.png" alt="Image 2"></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/portfolio-3.png" alt="Image 3"></a>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <button class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="spotlight">
+        <div class="spotlight__tabs">
+            <div class="spotlight__tabs-elements">
+                <div class="spotlight__tabs-element spotlight__tabs-element--active">tin nổi bật</div>
+                <div class="spotlight__tabs-element">tin hà nội</div>
+                <div class="spotlight__tabs-element">tin tp.hồ chí minh</div>
+            </div>
+            <a href="#" class="spotlight__tabs-more">xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="spotlight__main">
+            <a href="" class="spotlight__headline">
+                <div class="spotlight__headline-img">
+                    <img src="./assets/highlight-1.png" alt="">
+                </div>
+                <div class="spotlight__headline-head">Rose Town 79 Ngọc Hồi</div>
+                <div class="spotlight__headline-description">Rose Town là tổ hợp căn hộ chung cư, biệt thự liền kề và
+                    văn phòng cho thuê được thiết kế hiện đại, sang trọng cùng
+                    không gian xanh thoáng đãng, yên bình hiếm có tại khu vực phía Nam Hà Nội. </div>
+                <div class="spotlight__headline-time"><i class="fa-regular fa-calendar"></i>07/05/2024</div>
+
+            </a>
+            <div class="spotlight__list">
+                <a class="spotlight__list-element">
+                    <div class="spotlight__list-element-wrap">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <p class="spotlight__list-time"><i class="fa-regular fa-calendar"></i>07/05/2024</p>
+                    </div>
+                    <img src="./assets/spotlight-list-2.png" alt="">
+                </a>
+                <a class="spotlight__list-element">
+                    <div class="spotlight__list-element-wrap">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <p class="spotlight__list-time"><i class="fa-regular fa-calendar"></i>07/05/2024</p>
+                    </div>
+                    <img src="./assets/spotlight-list-3.png" alt="">
+                </a>
+                <a class="spotlight__list-element">
+                    <div class="spotlight__list-element-wrap">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <p class="spotlight__list-time"><i class="fa-regular fa-calendar"></i>07/05/2024</p>
+                    </div>
+                    <img src="./assets/spotlight-list-4.png" alt="">
+                </a>
+                <a class="spotlight__list-element">
+                    <div class="spotlight__list-element-wrap">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <p class="spotlight__list-time"><i class="fa-regular fa-calendar"></i>07/05/2024</p>
+                    </div>
+                    <img src="./assets/spotlight-list-5.png" alt="">
+                </a>
+                <a class="spotlight__list-element">
+                    <div class="spotlight__list-element-wrap">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <p class="spotlight__list-time"><i class="fa-regular fa-calendar"></i>07/05/2024</p>
+                    </div>
+                    <img src="./assets/spotlight-list-1.png" alt="">
+                </a>
+
+                <a class="spotlight__list-more">xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="spotlight__ads">
+                <a href=""><img src="./assets/spotlight-ads-1.png" alt=""></a>
+                <a href=""><img src="./assets/spotlight-ads-2.png" alt=""></a>
+            </div>
+
+    </section>
+    <section class="banner-1">
+        <div class="banner-1__content">
+            <a>Tìm hiểu ngay</a>
+            <div class="banner-1__text">
+                <p class="text1">Bất động sản</p>
+                <p class="text2">Linkinvest</p>
+            </div>
+        </div>
+        <div class="banner-1__img">
+            <img src="./assets/banner-1-img.png" alt="" class="">
+            <div class="overlay"></div>
+        </div>
+    </section>
+    <section class="location">
+        <div class="location__intro">
+            <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="p__wrap">
+                <p class="p1">bất động sản</p>
+                <p class="p2">theo địa điểm</p>
+            </div>
+            <a href="#">xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="location__detail-wrap">
+            <a class="location__detail hanoi">
+                <div class="overlay"></div>
+                <p class="p__location">Hà Nội</p>
+                <p class="p__nop">60.271 tin đăng</p>
+                <!-- <img src="./assets/location-1.png" alt=""> -->
+            </a>
+            <a class="location__detail hcm">
+                <p class="p__location">Hồ Chí Minh</p>
+                <p class="p__nop">60.271 tin đăng</p>
+                <!-- <img src="./assets/location-1.png" alt=""> -->
+
+
+            </a>
+            <a class="location__detail danang">
+                <p class="p__location">Sài Gòn</p>
+                <p class="p__nop">60.271 tin đăng</p>
+                <!-- <img src="./assets/location-1.png" alt=""> -->
+
+
+            </a>
+            <a class="location__detail binhduong">
+                <div class="overlay"></div>
+                <p class="p__location">Bình Dương</p>
+                <p class="p__nop">60.271 tin đăng</p>
+                <!-- <img src="./assets/location-1.png" alt=""> -->
+            </a>
+
+        </div>
+    </section>
+    <section class="location__swiper">
+        <div class="slider">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <p>Vinhomes Central Park</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vinhomes Smart City</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vinhomes Grand Park</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vinhomes Ocean Park</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vũng Tàu Pearl</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Bcons Green View</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vinhomes Ocean Park</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Vũng Tàu Pearl</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <p>Bcons Green View</p>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- Add Navigation -->
+                <button class="swiper-button-prev location-swiper-button-prev"><i
+                        class="fa-regular fa-less-than"></i></button>
+                <button class="swiper-button-next location-swiper-button-next"><i
+                        class="fa-regular fa-greater-than"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="knowledge">
+        <div class="slider">
+            <h2 class="slider__title">Kiến thức đầu tư</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-1.png" alt="Image 1">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+
+                            </p>
+                            <p class="knowledge__time"><i class="fa-regular fa-calendar"></i>27/10/2024
+                            </p>
+                        </div>
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-2.png" alt="Image 2">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text">Lorem ipsuctetur adipisicing elit. Earum
+                                dolorem qui
+                                necessitatibus.
+                            </p>
+                            <p class="knowledge__time"><i class="fa-regular fa-calendar"></i>27/10/2024
+                            </p>
+
+                        </div>
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-3.png" alt="Image 3">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text">Lr adipisicing elit. Earum
+                                dolorem qui
+                                necessitatibus.
+                            </p>
+                            <p class="knowledge__time">27/10/2024
+                            </p>
+
+                        </div>
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-1.png" alt="Image 1">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text">Lorr adipisicing elit. Earum
+                                dolorem qui
+                                necessitatibus.
+                            </p>
+                            <p class="knowledge__time">27/10/2024
+                            </p>
+
+                        </div>
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-2.png" alt="Image 2">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text"> adipisicing elit. Earum
+                                dolorem qui
+                                necessitatibus.
+                            </p>
+                            <p class="knowledge__time"><i class="fa-regular fa-calendar"></i>27/10/2024
+                            </p>
+
+                        </div>
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/knowledge-3.png" alt="Image 3">
+                        <div class="knowledge__content">
+                            <p class="knowledge__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                                dolorem qui
+                                necessitatibus.
+                            </p>
+                            <p class="knowledge__time"><i class="fa-regular fa-calendar"></i>27/10/2024
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Add Navigation -->
+                <button class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </section>
+    <section class="cooperate">
+        <div class="slider">
+            <h2 class="slide__title">Khách hàng nổi bật</h2>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-1.png">
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-2.png">
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-3.png">
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-4.png">
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-5.png">
+                    </a>
+                    <a class="swiper-slide">
+                        <img src="./assets/cooperate-6.png">
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- Add Navigation -->
+                <button class="swiper-button-prev location-swiper-button-prev"><i
+                        class="fa-regular fa-less-than"></i></button>
+                <button class="swiper-button-next location-swiper-button-next"><i
+                        class="fa-regular fa-greater-than"></i></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="cooperate__mobile">
+        <h2 class="slide__title">Khách hàng nổi bật</h2>
+        <div class="swiper-wrapper">
+            <a class="swiper-slide">
+                <img src="./assets/cooperate-1.png">
+            </a>
+            <a class="swiper-slide">
+                <img src="./assets/cooperate-2.png">
+            </a>
+            <a class="swiper-slide">
+                <img src="./assets/cooperate-3.png">
+            </a>
+            <a class="swiper-slide">
+                <img src="./assets/cooperate-4.png">
+            </a>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Navigation -->
+        </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="banner-container">
+            <div class="item-left">
+                <p>Ứng dụng tải xuống</p>
+                <div class="download-container">
+                    <div class="download-app">
+                        <div>
+                            <img src="./assets/banner-appstore.svg" alt="" />
+                        </div>
+                        <div>
+                            <img src="./assets/banner-googleplay.svg" alt="" />
+                        </div>
+                    </div>
+                    <img src="./assets/banner-qrcode.svg" alt="" />
+                </div>
+                <div class="img-linkin">
+                    <img src="./assets/banner-linkinvest.png" alt="" />
+                </div>
+
+                <div class="img-linkin2">
+                    <img src="./assets/banner-linkinvest2.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="banner-container-right">
+            <div class="container-right-content">
+                <h1>
+                    ĐẦU TƯ BẤT ĐỘNG SẢN TRỞ NÊN DỄ DÀNG CÙNG <span>ỨNG DỤNG LINKINVEST</span>
+                </h1>
+                <p>
+                    Nền tảng đầu tư bất động sản đáng tin cậy trong mọi quyết định đầu
+                    tư
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="communicate">
+        <div class="slider">
+            <h2 class="slide__title">Báo chí nói về Link Invest</h2>
+            <div class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide">
+                        <img class="swiper-slide__logo" src="./assets/communicate-logo-1.png">
+                        <img class="swiper-slide__img" src="./assets/communicate-img-1.png" alt="">
+                        <p class="swiper-slide__text">Rose Town là tổ hợp căn hộ chung cư, biệt thự liền kề và văn phòng
+                            cho thuê</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <img class="swiper-slide__logo" src="./assets/communicate-logo-2.png">
+                        <img class="swiper-slide__img" src="./assets/communicate-img-2.png" alt="">
+                        <p class="swiper-slide__text">Rose Town là tổ hợp căn hộ chung cư, biệt thự liền kề và văn phòng
+                            cho thuê</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <img class="swiper-slide__logo" src="./assets/communicate-logo-3.png">
+                        <img class="swiper-slide__img" src="./assets/communicate-img-3.png" alt="">
+                        <p class="swiper-slide__text">Rose Town là tổ hợp căn hộ chung cư, biệt thự liền kề và văn phòng
+                            cho thuê</p>
+                    </a>
+                    <a class="swiper-slide">
+                        <img class="swiper-slide__logo" src="./assets/communicate-logo-4.png">
+                        <img class="swiper-slide__img" src="./assets/communicate-img-4.png" alt="">
+                        <p class="swiper-slide__text">Rose Town là tổ hợp căn hộ chung cư, biệt thự liền kề và văn phòng
+                            cho thuê</p>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <button class="swiper-button-prev location-swiper-button-prev"><i
+                        class="fa-regular fa-less-than"></i></button>
+                <button class="swiper-button-next location-swiper-button-next"><i
+                        class="fa-solid fa-greater-than"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="statistics">
+        <div class="statistics-item">
+            <div>
+                <img class="statistics-img" src="./assets/statistic.svg" alt="" />
+            </div>
+            <div class="div">
+                <h2>THỐNG KÊ</h2>
+                <h1>LINKINVEST</h1>
+            </div>
+        </div>
+
+        <div class="statistics-item">
+            <div><img src="./assets/statistic-global.png" /></div>
+        </div>
+
+        <div class="statistics-item statistics-detail">
+            <div class="item-detail">
+                <h1>1723</h1>
+                <p>Khách hàng</p>
+            </div>
+
+            <div class="item-detail">
+                <h1>1.700 +</h1>
+                <p>Lượt truy cập</p>
+            </div>
+
+            <div class="item-detail">
+                <h1>876</h1>
+                <p>Dự án chào bán</p>
+            </div>
+
+            <div class="item-detail">
+                <h1>700</h1>
+                <p>Người theo dõi</p>
+            </div>
+        </div>
+    </section>
+    <section class="get-infor">
+        <div class="get-infor-container">
+            <div>
+                <img src="./assets/get-info-mail.svg" alt="" />
+                <p>ĐĂNG KÝ NHẬN TIN</p>
+            </div>
+            <div class="email">
+                <input type="text" placeholder="Nhập email của bạn" />
+                <div class="img-border">
+                    <img src="./assets/get-info-clippathgroup.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="download">
+            <img src="./assets/footer-logo.svg" alt="" />
+            <div class="download-app">
+                <p>Ứng dụng tải xuống</p>
+                <div>
+                    <img src="./assets/footer-appstore.svg" alt="" />
+                    <img src="./assets/footer-googleplay.svg" alt="" />
+                </div>
+                <img src="./assets/footer-qr.svg" alt="" />
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="company-info">
+                <h6 class="company-name">CÔNG TY CỔ PHẦN THƯƠNG MẠI TRỰC TUYẾN AN THỊNH PHÁT</h6>
+                <div class="company-info-item">
+                    <img src="./assets/footer-position.svg" alt="" />
+                    <div>
+                        <p class="address">Địa chỉ</p>
+                        <p class="detail">
+                            Thôn Ngũ Xã, xã Vĩnh Xá, H. Kim Động, Tỉnh Hưng Yên
+                        </p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="./assets/footer-position.svg" alt="" />
+                    <div>
+                        <p class="address">Trụ sở chính</p>
+                        <p class="detail">
+                            Toà nhà TSQ Euroland, Nguyễn Văn Lộc, P. Mộ Lao Q. Hà Đông, Tp.
+                            Hà Nội
+                        </p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="./assets/footer-phone.svg" alt="" />
+                    <div>
+                        <p class="detail">0918871984</p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <img src="./assets/footer-email.svg" alt="" />
+                    <div>
+                        <p class="detail">linkinvest@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h6>DANH MỤC VỀ LINKINVEST</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Giới thiệu</a>
+                    <a class="item" href="">Liên hệ</a>
+                    <a class="item" href="">Chính sách bảo mật</a>
+                    <a class="item" href="">Điều khoản dịch vụ</a>
+                    <a class="item" href="">Quy chế hoạt động</a>
+                </nav>
+            </div>
+
+            <div class="project-position">
+                <h6>DỰ ÁN THEO KHU VỰC</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Bắc Giang</a>
+                    <a class="item" href="">Phú Yên</a>
+                    <a class="item" href="">Quảng Ninh</a>
+                    <a class="item" href="">Hà Nội</a>
+                    <a class="item view" href="">Xem tất cả
+                        <i class="fa-solid fa-arrow-right"></i> </a>
+                </nav>
+            </div>
+
+            <div class="new">
+                <h6>TIN TỨC THEO CHỦ ĐỀ</h6>
+                <nav class="infor-container">
+                    <a class="item" href="">Tin nổi bật</a>
+                    <a class="item" href="">Tin Hà Nội</a>
+                    <a class="item" href="">Tin Hồ Chí Minh</a>
+                    <a class="item" href="">Kiến thức đầu tư</a>
+                    <a class="item view" href="">Xem thêm
+                        <i class="fa-solid fa-arrow-right"></i> </a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="powered-by">
+                <p>Giấy phép đăng ký kinh doanh số: <span>0901100874</span></p>
+                <p>
+                    Copyright &copy; 2024 <span>LINKINVEST</span>. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social-contact">
+                <p>Kết nối với chúng tôi</p>
+                <nav class="social-icon">
+                    <a href="">
+                        <img src="./assets/footer-facebook.svg" alt="" /></a>
+                    <a href="">
+                        <img src="./assets/footer-tiktok.svg" alt="" /></a>
+                    <a href="">
+                        <img src="./assets/footer-youtube.svg" alt="" /></a>
+                    <a href="">
+                        <img src="./assets/footer-zalo.svg" alt="" /></a>
+                    <a href="">
+                        <img src="./assets/footer-mail.svg" alt="" /></a>
+                </nav>
+            </div>
+            <div class="certi">
+                <div class="certi1">
+                    <img src="./assets/footer-google.svg" alt="" />
+                    <div>
+                        <p>For Starups Accelerator 2020</p>
+                    </div>
+                    <img src="./assets/footer-dmca.svg" alt="" />
+                </div>
+                <img src="./assets/footer-certificate.svg" alt="" />
+            </div>
+        </div>
+    </section>
+    <div class="onscroll" id="scrollToTopButton"><i class="fa-solid fa-chevron-up"></i></div>
+    <div class="support__btn">
+        <a href=""><i class="fa-solid fa-phone"></i></a>
+        <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a href="" class="onscroll"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.custom-select-wrapper').forEach((wrapper) => {
+            const select = wrapper.querySelector('.custom-select');
+            const trigger = select.querySelector('.custom-select__trigger');
+            const options = select.querySelectorAll('.custom-select__option');
+
+            trigger.addEventListener('click', () => {
+                select.classList.toggle('custom-select--open');
+            });
+
+            options.forEach((option) => {
+                option.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const selectedOption = select.querySelector('.custom-select__option--selected');
+                    if (selectedOption) {
+                        selectedOption.classList.remove('custom-select__option--selected');
+                    }
+                    option.classList.add('custom-select__option--selected');
+                    trigger.querySelector('span').textContent = option.textContent;
+                    select.classList.remove('custom-select--open');
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!select.contains(event.target)) {
+                    select.classList.remove('custom-select--open');
+                }
+            });
+        });
+
+
+        var menuBar = document.getElementById("mobile__menu");
+        var toggleMenuButton = document.getElementById("menuBar");
+        var closeMenuButton = document.getElementById("closeBar");
+        var scrollToTopButton = document.querySelector('.onscroll');
+        var supportButton = document.querySelector('.support__btn');
+
+        toggleMenuButton.addEventListener("click", function () {
+            menuBar.style.right = "0";
+            toggleMenuButton.style.display = "none";
+            closeMenuButton.style.display = "block";
+        });
+
+        closeMenuButton.addEventListener("click", function () {
+            menuBar.style.right = "-80vw";
+            toggleMenuButton.style.display = "block";
+            closeMenuButton.style.display = "none";
+        });
+
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 200) { // Show buttons after scrolling 200px
+                scrollToTopButton.style.display = 'flex';
+                supportButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+                supportButton.style.display = 'none';
+            }
+        });
+
+        // Add an event listener for the click event on the scroll-to-top button
+        scrollToTopButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll to top
+            });
+        });
+
+        // Ensure the buttons are initially hidden
+        scrollToTopButton.style.display = 'none';
+        supportButton.style.display = 'none';
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove the active class from all tabs
+                    tabs.forEach(t => t.classList.remove('tab--active'));
+
+                    // Add the active class to the clicked tab
+                    this.classList.add('tab--active');
+                });
+            });
+            var swiper = new Swiper('.mySwiper', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                centeredSlides: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    100: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    }
+                }
+            });
+
+
+            var swiper2 = new Swiper('.mySwiper2', {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                centeredSlides: true,
+                breakpoints: {
+
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    100: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    }
+                }
+
+            });
+
+            var swiper3 = new Swiper('.mySwiper3', {
+                slidesPerView: 5,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                centeredSlides: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    500: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10
+                    },
+                    100: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+
+            });
+
+            var swiper4 = new Swiper('.mySwiper4', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                centeredSlides: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    500: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10
+                    },
+                    100: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+
+            });
+
+
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const tabs = document.querySelectorAll('.search__tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove the active class from all tabs
+                    tabs.forEach(t => t.classList.remove('search__tab--active',));
+
+                    // Add the active class to the clicked tab
+                    this.classList.add('search__tab--active');
+                });
+            });
+
+            const spotlight_tabs = document.querySelectorAll('.spotlight__tabs-element');
+
+            spotlight_tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove the active class from all tabs
+                    spotlight_tabs.forEach(t => t.classList.remove('spotlight__tabs-element--active'));
+
+                    // Add the active class to the clicked tab
+                    this.classList.add('spotlight__tabs-element--active');
+                });
+            });
+
+
+
+            const nav = document.querySelector('.nav');
+            const navLogo = document.getElementById('nav-logo');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                    navLogo.src = './assets/logo.png';
+                } else {
+                    nav.classList.remove('scrolled');
+                    navLogo.src = './assets/logo-white.png';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

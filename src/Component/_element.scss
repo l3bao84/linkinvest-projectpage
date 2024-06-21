@@ -1,0 +1,554 @@
+@use "./base" as *;
+
+@mixin center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button($padding, $bg-color, $font-size, $color) {
+  background-color: $bg-color;
+  padding: $padding;
+  text-transform: uppercase;
+  font-size: $font-size;
+  color: $color;
+  border: none;
+}
+
+@mixin top {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: $sf-font;
+}
+
+@mixin respond_to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: $breakpoint-xlarge) {
+      @content;
+    }
+  }
+}
+
+@mixin search {
+  .search {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+
+    .search__tabs {
+      display: flex;
+      padding: 0 2em;
+      border: none;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .search__tab {
+      padding: 1em 2em;
+      border: none;
+      background-color: $white-color;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 1.8rem;
+      margin-right: 1rem;
+      border: none;
+      font-weight: semibold;
+
+      &--active {
+        background-color: $blue-active-color;
+        color: $white-color;
+      }
+    }
+
+    .search-container {
+      width: 70%;
+      background-color: $white-color;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+      padding: 2em 2em;
+      margin: 0 auto;
+
+      &__search-bar {
+        display: flex;
+        margin-bottom: 2rem;
+        width: 100%;
+      }
+
+      &__search-input {
+        padding: 0.7rem;
+        width: 85%;
+        border: 1px solid $gray-border-color;
+        outline: none;
+        margin-right: 1%;
+        font-size: 1.6em;
+        font-weight: semibold;
+      }
+
+      &__search-button {
+        padding: 1rem 4.5rem;
+        border: none;
+        background-color: $blue-color;
+        color: $white-color;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s;
+        font-size: 1.6em;
+
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+
+      &__filters {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        justify-content: space-between;
+        font-size: 1.6em;
+        // border: 1px solid gray;
+      }
+
+      .filter {
+        position: relative;
+        width: 30%;
+      }
+
+      .custom-select-wrapper {
+        position: relative;
+        user-select: none;
+      }
+
+      .custom-select {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__trigger {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          background-color: $white-color;
+          border: 1px solid $gray-border-color;
+          cursor: pointer;
+
+          span {
+            font-size: 1.6rem;
+            color: $gray-text-color;
+          }
+
+          .custom-select__arrow {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+          }
+        }
+
+        &__options {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: $white-color;
+          border: 1px solid $gray-color;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          z-index: 10;
+        }
+
+        &__option {
+          padding: 1em;
+          cursor: pointer;
+          font-size: 1.6rem;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
+
+          &--selected {
+            background-color: #3498db;
+            color: #fff;
+
+            &:hover {
+              background-color: #2980b9;
+            }
+          }
+        }
+
+        &--open .custom-select__options {
+          display: flex;
+        }
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $border-color;
+      // border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+
+      &__trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #fff;
+      }
+
+      &__options {
+        display: none;
+        position: absolute;
+        width: 100%;
+        border: 1px solid $border-color;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+        &__option {
+          padding: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $primary-color;
+            color: #fff;
+          }
+        }
+      }
+
+      &--open .custom-select__options {
+        display: block;
+      }
+
+      &__arrow {
+        margin-left: 10px;
+        border: solid $primary-color;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .custom-select__arrow {
+    width: 1px;
+    height: 1px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+  }
+}
+
+@mixin rps__base {
+  .header {
+    display: none;
+  }
+  .header__mobile {
+    height: 100vh;
+    display: block;
+
+    .header__nav-wrap {
+      position: fixed;
+      top: 0;
+      z-index: 200;
+      right: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      width: 100%;
+      background-color: $dark-blue-color;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $white-color;
+      margin: 0;
+      text-transform: uppercase;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      position: fixed;
+      z-index: 200;
+    }
+    &-nav {
+      background-color: $white-color;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+
+      padding: 1.5rem 2rem;
+      i {
+        font-size: 2rem;
+        color: $dark-blue-color;
+      }
+    }
+
+    &-content {
+      height: 90vh;
+      background: url("../../public/assets/header.png") center;
+      background-size: cover;
+      position: relative;
+      margin-top: 11rem;
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #004274;
+        opacity: 0.6;
+        z-index: 1;
+      }
+
+      &-main {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        .title1 {
+          font-size: 4rem;
+          font-weight: bold;
+          color: $white-color;
+          text-transform: uppercase;
+          margin: 0 0 0.5rem 0;
+        }
+        .title2 {
+          font-size: 3rem;
+          font-weight: 600;
+          color: $white-color;
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 0.5rem;
+        }
+        button {
+          @include button(1rem 2rem, $yellow-color, 1.4rem, $white-color);
+          font-weight: bold;
+          letter-spacing: 0.1rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    &-search {
+      width: 100%;
+      padding: 0 5rem;
+      margin: 5rem 0 0 0;
+      &-tab {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        .tab {
+          @include button(1rem 3rem, $blue-color, 1.8rem, $white-color);
+          text-transform: capitalize;
+          width: 45%;
+          text-align: center;
+          &--active {
+            background-color: $white-color;
+            color: #000000;
+          }
+        }
+      }
+      &-content {
+        width: 100%;
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+
+        .search-container__search-button {
+          background-color: $blue-color;
+        }
+
+        .search-container__search-bar {
+          width: 100%;
+          input {
+            width: 100%;
+            padding: 1rem 1rem;
+            font-size: 1.6rem;
+            border: 1px solid $gray-border-color;
+          }
+        }
+
+        .search-container__filters {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 1.6em;
+          gap: 2rem;
+          margin-top: 2rem;
+          // border: 1px solid gray;
+        }
+
+        .filter {
+          position: relative;
+          width: 100%;
+        }
+
+        .custom-select-wrapper {
+          position: relative;
+          user-select: none;
+        }
+
+        .custom-select {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          &__trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: $white-color;
+            border: 1px solid $gray-border-color;
+            cursor: pointer;
+
+            span {
+              font-size: 1.6rem;
+              color: $gray-text-color;
+            }
+
+            .custom-select__arrow {
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid #000;
+            }
+          }
+
+          &__options {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $white-color;
+            border: 1px solid $gray-color;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+          }
+
+          &__option {
+            padding: 1em;
+            cursor: pointer;
+            font-size: 1.6rem;
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+
+            &--selected {
+              background-color: #3498db;
+              color: #fff;
+
+              &:hover {
+                background-color: #2980b9;
+              }
+            }
+          }
+
+          &--open .custom-select__options {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile__menu {
+    display: flex;
+    width: 80vw;
+    height: 86vh;
+    background-color: $white-color;
+    position: fixed;
+    bottom: 0;
+    right: -80vw;
+    z-index: 200;
+    flex-direction: column;
+    padding: 5rem 0 0 2rem;
+    gap: 2rem;
+    transition: all 0.3s;
+
+    &-link {
+      font-size: 1.8rem;
+      i {
+        font-size: 1.8rem;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &-footer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+
+      p {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1.8rem;
+      }
+
+      .logo-wrap {
+        margin: 0 auto 2rem;
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}

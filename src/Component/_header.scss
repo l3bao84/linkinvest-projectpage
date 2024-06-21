@@ -1,0 +1,97 @@
+@use "./base" as *;
+@use "./element" as element;
+
+@mixin header {
+  background-image: url("../assets/header.png");
+  background-size: cover;
+  display: flex;
+  height: 60vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: $gray-background-color;
+
+  &__elements {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    gap: 1.5em;
+
+    &-h1 {
+      font-size: 7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $white-color;
+    }
+    &-h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: semibold;
+      letter-spacing: 0.3rem;
+      color: $white-color;
+    }
+
+    button {
+      @include button(1rem 3rem, $yellow-color, 1.8rem, $white-color);
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 66, 116, 0.7);
+    z-index: 2;
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 2.5rem 15% 1.5rem;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+      :hover {
+        border-bottom: 2px solid $white-color;
+      }
+
+      &-element {
+        margin: 0 1.2rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $white-color;
+        font-weight: 500;
+      }
+    }
+  }
+  .nav.scrolled {
+    background-color: white;
+    width: 100%;
+    padding: 1rem 15%;
+    margin-top: 0;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    a {
+      color: $blue-color;
+    }
+    a:hover {
+      border-bottom: 2px solid $blue-color;
+    }
+  }
+}
+// }

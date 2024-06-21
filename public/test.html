@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+    <div class="range-slider">
+        <input type="range" min="0" max="1000" value="200" id="slider-range-min">
+        <input type="range" min="0" max="1000" value="800" id="slider-range-max">
+        <div class="slider-track"></div>
+        <div class="slider-values">
+            <span id="range-min">200</span> - <span id="range-max">800</span>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const rangeMin = document.getElementById('slider-range-min');
+            const rangeMax = document.getElementById('slider-range-max');
+            const minValue = document.getElementById('range-min');
+            const maxValue = document.getElementById('range-max');
+            const sliderTrack = document.querySelector('.slider-track');
+
+            function updateValues() {
+                const min = parseInt(rangeMin.value);
+                const max = parseInt(rangeMax.value);
+
+                // Ensure the min handle is always less than the max handle
+                if (min >= max) {
+                    rangeMin.value = max - 10;
+                }
+                if (max <= min) {
+                    rangeMax.value = min + 10;
+                }
+
+                minValue.textContent = rangeMin.value;
+                maxValue.textContent = rangeMax.value;
+                fillTrack();
+            }
+
+            function fillTrack() {
+                const percent1 = (rangeMin.value / rangeMin.max) * 100;
+                const percent2 = (rangeMax.value / rangeMax.max) * 100;
+                sliderTrack.style.background = `linear-gradient(to right, #ddd ${percent1}%, #3498db ${percent1}%, #3498db ${percent2}%, #ddd ${percent2}%)`;
+            }
+
+            rangeMin.addEventListener('input', updateValues);
+            rangeMax.addEventListener('input', updateValues);
+
+            updateValues(); // Initialize values and track fill
+        });
+
+    </script>
+</body>
+
+</html>
