@@ -171,6 +171,7 @@ body {
       margin: 0 auto;
 
       &__search-bar {
+        gap: 1.6rem;
         display: flex;
         margin-bottom: 2rem;
         width: 100%;
@@ -181,13 +182,13 @@ body {
         width: 85%;
         border: 1px solid $gray-border-color;
         outline: none;
-        margin-right: 1%;
+        flex: 1;
         font-size: 1.6em;
         font-weight: semibold;
       }
 
       &__search-button {
-        padding: 1rem 4rem;
+        padding: 1rem 4.5rem;
         border: none;
         background-color: $blue-color;
         color: $white-color;
@@ -195,7 +196,6 @@ body {
         outline: none;
         transition: background-color 0.3s;
         font-size: 1.6em;
-        width: 20%;
 
         &:hover {
           background-color: #2980b9;
@@ -246,6 +246,16 @@ body {
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             border-top: 5px solid #000;
+          }
+
+          .custom-select__icon {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .custom-select__icon i:first-child {
+            position: relative;
+            bottom: -3px;
           }
         }
 
@@ -369,6 +379,7 @@ body {
       height: 100%;
       &-img img {
         max-width: 100%;
+        width: 100%;
       }
       &-head {
         font-size: 3rem;
@@ -381,6 +392,12 @@ body {
         font-size: 1.6rem;
         line-height: 2.5rem;
         margin: 1rem 0;
+
+        display: -webkit-box;      
+        -webkit-box-orient: vertical; 
+        overflow: hidden;       
+        text-overflow: ellipsis;   
+        -webkit-line-clamp: 4;
       }
 
       &-time {

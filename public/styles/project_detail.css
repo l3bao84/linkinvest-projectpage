@@ -91,8 +91,9 @@ body .header .nav {
   top: 0;
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin: 2.5rem 15% 1.5rem;
+  width: 100%;
+  padding: 1rem 15%;
+  margin: 0;
 }
 body .header .nav__link {
   display: flex;
@@ -108,6 +109,7 @@ body .header .nav__link-element {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: 500;
+  white-space: nowrap;
 }
 body .header .nav.scrolled {
   background-color: white;
@@ -138,6 +140,34 @@ body .header .nav__link-element--active {
   color: #004274;
   border-bottom: 2px solid #004274;
   padding-bottom: calc(1.5rem - 2px);
+}
+body .menubar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -25%);
+  z-index: 199;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+body .menubar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+body .menubar a i {
+  font-size: 2rem;
+  color: black;
+}
+body .menubar a:hover {
+  background-color: #06aeff;
+}
+body .menubar a:hover i {
+  color: #ffffff;
 }
 body .gap__navigation {
   width: 100%;
@@ -272,6 +302,7 @@ body .content__project-img-thumbnail a {
   border: 1px solid #828282;
 }
 body .content__keyword {
+  cursor: pointer;
   margin: 2rem 0;
   display: flex;
   gap: 1.5rem;
@@ -678,6 +709,45 @@ body .certi1 {
 }
 body .certi1 img {
   max-width: 50%;
+}
+body .onscroll {
+  display: none;
+}
+body .support__btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 2rem;
+}
+body .support__btn a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-decoration: none;
+}
+body .support__btn a i {
+  font-size: 2rem;
+  color: #ffffff;
+}
+body .support__btn a:nth-child(1) {
+  background-color: #f7941d;
+  border-color: #f7941d;
+}
+body .support__btn a:nth-child(2) {
+  background-color: #06aeff;
+  border-color: #06aeff;
+}
+body .support__btn a:nth-child(3) {
+  background-color: #1868b3;
+  border-color: #1868b3;
 }
 @media only screen and (max-width: 500px) {
   body .header {

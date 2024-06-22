@@ -67,6 +67,16 @@
             </div>
         </div>
     </section>
+    <section class="menubar">
+        <a href=""><i class="fa-solid fa-house"></i></a>
+        <a href=""><i class="fa-solid fa-note-sticky"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+        <a href=""><i class="fa-solid fa-image"></i></a>
+        <a href=""><i class="fa-solid fa-gear"></i></a>
+        <a href=""><i class="fa-solid fa-wifi"></i></a>
+        <a href=""><i class="fa-solid fa-phone-volume"></i></a>
+    </section>
     <section class="gap__navigation">
         <div class="gap__navigation-content">
             <a href="" class="gap__navigation-content-link">Trang chủ</a>
@@ -482,7 +492,38 @@
             </div>
         </div>
     </section>
+    <div class="onscroll" id="scrollToTopButton"><i class="fa-solid fa-chevron-up"></i></div>
+    <div class="support__btn">
+        <a href=""><i class="fa-solid fa-phone"></i></a>
+        <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a href="" class="onscroll"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
     <script>
+
+        var scrollToTopButton = document.querySelector('.onscroll');
+        var supportButton = document.querySelector('.support__btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = 'flex';
+                supportButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+                supportButton.style.display = 'none';
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollToTopButton.style.display = 'none';
+        supportButton.style.display = 'none';
+
         let slideIndex = 1;
         showSlides(slideIndex);
 

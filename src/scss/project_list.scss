@@ -26,7 +26,39 @@ body {
     display: none;
   }
 
+
   @include element.search;
+
+  .menubar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -25%);
+    z-index: 199;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1.5rem;
+      background-color: $white-color;
+      text-decoration: none;
+      i {
+        font-size: 2rem;
+        color: black;
+      }
+    }
+
+    a:hover {
+      background-color: $blue-color;
+      i {
+        color: $white-color;
+      }
+    }
+  }
 
   .gap__navigation {
     width: 100%;
@@ -225,5 +257,51 @@ body {
     }
   }
 
-  @include project_list__rps.project_list__responsive
+  .onscroll {
+    display: none;
+  }
+
+  .support__btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 2rem;
+    a {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+      border-radius: 50%;
+      text-decoration: none;
+      i {
+        font-size: 2rem;
+        color: $white-color;
+      }
+    }
+
+    a:nth-child(1) {
+      background-color: $yellow-color;
+      border-color: $yellow-color;
+    }
+
+    a:nth-child(2) {
+      background-color: $blue-color;
+      border-color: $blue-color;
+    }
+
+    
+    a:nth-child(3) {
+      background-color: $dark-blue-color;
+      border-color: $dark-blue-color;
+    }
+  }
+
+  @include project_list__rps.project_list__responsive;
+  
 }
