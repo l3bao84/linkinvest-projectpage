@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Regular.otf");
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "OriginFont";
+  src: url("../../public/assets/SFPRO/SF-Pro-Display-Semibold.otf");
+  font-weight: 600;
+}

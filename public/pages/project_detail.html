@@ -44,12 +44,35 @@
             <div class="overlay"></div>
         </div>
     </section>
+    <section class="mobile__menu" id="mobile__menu">
+        <div class="mobile__menu-link"><i class="fa-solid fa-house-chimney"></i>Trang chủ</div>
+        <div class="mobile__menu-link"><i class="fa-brands fa-staylinked"></i>Về chúng tôi</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-buildings"></i></i>Dự án</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-memo-pad"></i>Blog</div>
+        <div class="mobile__menu-link"><i class="fa-solid fa-phone-volume"></i>Liên hệ</div>
+        <div class="mobile__menu-footer">
+            <p>Kết nối với chúng tôi</p>
+            <div class="logo-wrap">
+                <a href="">
+                    <img src="../assets/footer-facebook.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-tiktok.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-youtube.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-zalo.svg" alt="" /></a>
+                <a href="">
+                    <img src="../assets/footer-mail.svg" alt="" /></a>
+
+            </div>
+        </div>
+    </section>
     <section class="gap__navigation">
         <div class="gap__navigation-content">
             <a href="" class="gap__navigation-content-link">Trang chủ</a>
-            <i class="fa-regular fa-greater-than"></i>
+            <i class="fa-solid fa-chevron-right"></i>
             <a href="" class="gap__navigation-content-link ">Dự án</a>
-            <i class="fa-regular fa-greater-than"></i>
+            <i class="fa-solid fa-chevron-right"></i>
             <a href="" class="gap__navigation-content-link gap__navigation-content-link--active">Dự án Danko Avenue Sông
                 Công</a>
         </div>
@@ -166,7 +189,7 @@
                 </div>
 
                 <div class="content__project-img-element">
-                    <img src="../assets/content-project-img-1.png">
+                    <img src="../assets/content-project-img-2.png">
                 </div>
 
                 <div class="content__project-img-element">
@@ -174,7 +197,7 @@
                 </div>
 
                 <div class="content__project-img-element">
-                    <img src="../assets/content-project-img-1.png">
+                    <img src="../assets/content-project-img-2.png">
                 </div>
 
                 <div class="content__project-img-thumbnail">
@@ -213,10 +236,14 @@
         </div>
         <div class="content-right">
             <div class="content__ads-1">
-                <img src="../assets/content-right-img-1.png" alt="">
+                <a href="">
+                    <img src="../assets/content-right-img-1.png" alt="">
+                </a>
             </div>
             <div class="content__ads-2">
-                <img src="../assets/content-right-img-2.png" alt="">
+                <a href="">
+                    <img src="../assets/content-right-img-2.png" alt="">
+                </a>
             </div>
             <div class="content__blog">
                 <p class="content__blog-heading">bài viết xem nhiều</p>
@@ -264,14 +291,14 @@
                             <img src="../assets/content-download-preview.png" alt="">
                         </div>
                     </div>
-                    <div class="content__download-footer">
-                        <div class="content__download-footer-container">
-                            <span>ĐẦU TƯ BẤT ĐỘNG SẢN TRỞ NÊN DỄ DÀNG CÙNG</span>
-                            <br/>
-                            <span class="content__download-app">ỨNG DỤNG LINKINVEST</span>
-                            <br/>
-                            <span>Nền tảng đầu tư bất động sản đáng tin cậy trong mọi quyết định đầu tư</span>
-                        </div>
+                </div>
+                <div class="content__download-footer">
+                    <div class="content__download-footer-container">
+                        <p>ĐẦU TƯ BẤT ĐỘNG SẢN TRỞ NÊN DỄ DÀNG CÙNG</p>
+                        <br/>
+                        <p class="content__download-app">ỨNG DỤNG LINKINVEST</p>
+                        <br/>
+                        <p>Nền tảng đầu tư bất động sản đáng tin cậy trong mọi quyết định đầu tư</p>
                     </div>
                 </div>
             </div>
@@ -280,10 +307,6 @@
     <section class="other">
         <div class="slider">
             <h2 class="slider__title">DỰ ÁN KHÁC</h2>
-            <div class="slider-button-container">
-                <button class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -324,6 +347,8 @@
                 </div>
                 <!-- Add Pagination -->
                 <!-- Add Navigation -->
+                <button class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
 
     </section>
@@ -483,8 +508,19 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
+            //captionText.innerHTML = dots[slideIndex - 1].alt;
         }
+
+        var menuBar = document.getElementById("mobile__menu");
+        var toggleMenuButton = document.getElementById("menuBar");
+
+        toggleMenuButton.addEventListener("click", function () {
+            if (menuBar.style.right === "0px") {
+                menuBar.style.right = "-80vw";
+            } else {
+                menuBar.style.right = "0";
+            }
+        });
 
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
