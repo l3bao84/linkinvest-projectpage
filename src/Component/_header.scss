@@ -72,27 +72,41 @@
       }
 
       &-element {
+        cursor: pointer;
+        padding: 1.5rem 0;
         margin: 0 1.2rem;
         font-size: 1.6rem;
         text-transform: uppercase;
         color: $white-color;
         font-weight: 500;
         white-space: nowrap;
+
+        &--scroll-active {
+          color: #1868B3 !important;
+          border-bottom: 2px solid #1868B3 !important;
+        }
+        &--active {
+          border-bottom: 2px solid $white-color;
+        }
       }
     }
   }
   .nav.scrolled {
     background-color: white;
     width: 100%;
-    padding: 1rem 15%;
+    //padding: 1rem 15%;
     margin-top: 0;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
     z-index: 200;
+
     a {
-      color: $blue-color;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      color: #333333;
     }
     a:hover {
-      border-bottom: 2px solid $blue-color;
+      color: #1868B3;
+      border-bottom: 2px solid #1868B3;
     }
   }
 }

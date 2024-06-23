@@ -40,7 +40,7 @@ body {
         &-element--active {
           color: $blue-active-color;
           border-bottom: 2px solid $blue-active-color;
-          padding-bottom: calc(1.5rem - 2px);
+          //padding-bottom: calc(1.5rem - 2px);
         }
       }
     }

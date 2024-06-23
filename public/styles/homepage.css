@@ -106,6 +106,8 @@ body .header .nav__link :hover {
   border-bottom: 2px solid #ffffff;
 }
 body .header .nav__link-element {
+  cursor: pointer;
+  padding: 1.5rem 0;
   margin: 0 1.2rem;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -113,19 +115,28 @@ body .header .nav__link-element {
   font-weight: 500;
   white-space: nowrap;
 }
+body .header .nav__link-element--scroll-active {
+  color: #1868B3 !important;
+  border-bottom: 2px solid #1868B3 !important;
+}
+body .header .nav__link-element--active {
+  border-bottom: 2px solid #ffffff;
+}
 body .header .nav.scrolled {
   background-color: white;
   width: 100%;
-  padding: 1rem 15%;
   margin-top: 0;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
   z-index: 200;
 }
 body .header .nav.scrolled a {
-  color: #06aeff;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  color: #333333;
 }
 body .header .nav.scrolled a:hover {
-  border-bottom: 2px solid #06aeff;
+  color: #1868B3;
+  border-bottom: 2px solid #1868B3;
 }
 body .header__mobile {
   display: none;
@@ -1082,9 +1093,11 @@ body .get-infor .get-infor-container div {
   display: flex;
   align-items: center;
   text-align: center;
+  gap: 1.9rem;
 }
 body .get-infor .get-infor-container div p {
   width: 100%;
+  white-space: nowrap;
 }
 body .get-infor .get-infor-container p {
   color: white;
