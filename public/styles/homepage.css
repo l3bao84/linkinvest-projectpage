@@ -203,6 +203,7 @@ body .portfolio .swiper-slide {
 body .portfolio .swiper-slide img {
   width: 100%;
   display: block;
+  border: 1px solid #DCE0E0;
 }
 body .portfolio .swiper-button-prev, body .portfolio .swiper-button-next {
   color: #000;
@@ -736,11 +737,45 @@ body .knowledge {
   background-color: #f6f7f8;
   width: 100%;
 }
+body .knowledge__content {
+  position: relative;
+}
+body .knowledge__content::after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-left: 2.5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-top: 16rem solid #F7941D;
+  right: -0.1rem;
+}
+body .knowledge__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 16rem solid transparent;
+  border-right: 5rem solid #F7941D;
+}
 body .knowledge__text {
+  width: calc(100% - 2.5rem);
   overflow: hidden;
   height: 35%;
   overflow: hidden; /* Hides any overflowing content */
   text-overflow: ellipsis; /* Adds the ellipsis (...) */
+}
+body .knowledge__no {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  z-index: 3;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 59.67px;
+  text-align: left;
+  color: #FFFFFF;
 }
 body .knowledge .slider {
   width: 70%;
@@ -768,6 +803,16 @@ body .knowledge .slider a {
 body .knowledge .slider a i {
   font-size: 1.6rem;
   margin-left: 1rem;
+}
+@media (max-width: 1023px) {
+  body .knowledge .slider a {
+    height: 370px;
+  }
+}
+@media (min-width: 1024px) {
+  body .knowledge .slider a {
+    height: auto;
+  }
 }
 body .knowledge .slider____title {
   font-size: 2em;
@@ -855,10 +900,17 @@ body .cooperate .slider .swiper {
   align-items: center;
 }
 body .cooperate .slider .swiper-slide {
-  align-self: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 1.9rem 1.5rem;
+  border: 1px solid #DCE0E0;
+  width: auto;
+  height: auto;
+}
+body .cooperate .slider .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
 }
 body .cooperate .slider .swiper-button-prev, body .cooperate .slider .swiper-button-next {
   color: #000;
@@ -1066,6 +1118,7 @@ body .statistics .statistics-detail .item-detail h1 {
   font-size: 4rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  color: #004274;
 }
 body .statistics .statistics-detail .item-detail p {
   font-size: 1.8rem;
@@ -1368,6 +1421,10 @@ body .support__btn a:nth-child(3) {
   }
   body .footer .footer-info .certi1 div p {
     font-size: 1.2rem;
+  }
+  body .footer .footer-info .certi1 {
+    display: flex;
+    gap: 1.6rem;
   }
 }
 @media sreen and (max-width: 1280px) {

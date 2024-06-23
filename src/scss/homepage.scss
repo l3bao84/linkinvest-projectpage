@@ -97,6 +97,7 @@ body {
         img {
           width: 100%;
           display: block;
+          border: 1px solid #DCE0E0;
         }
       }
 
@@ -742,12 +743,50 @@ body {
     background-color: $gray-background-color;
     width: 100%;
 
+    &__content {
+      position: relative;
+    }
+
+    &__content::after {
+      content: "";
+      top: 0;
+      right: 0;
+      position: absolute;
+      border-left: 2.5rem solid transparent;
+      border-right: 5rem solid transparent;
+      border-top: 16rem solid #F7941D;
+      right: -0.1rem;
+    }
+
+    &__content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 16rem solid transparent;
+      border-right: 5rem solid #F7941D;
+    }
+
     &__text {
+      width: calc(100% - 2.5rem);
       overflow: hidden;
       height: 35%;
       // white-space: nowrap; /* Prevents text from wrapping to a new line */
       overflow: hidden; /* Hides any overflowing content */
       text-overflow: ellipsis; /* Adds the ellipsis (...) */
+    }
+
+    &__no {
+      position: absolute;
+      top: 5rem;
+      right: 2rem;
+      z-index: 3;
+      font-family: "SF Pro Display", sans-serif;
+      font-size: 5rem;
+      font-weight: 300;
+      line-height: 59.67px;
+      text-align: left;
+      color: #FFFFFF;
     }
 
     .slider {
@@ -778,6 +817,18 @@ body {
         i {
           font-size: 1.6rem;
           margin-left: 1rem;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        a {
+          height: 370px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        a {
+          height: auto;
         }
       }
 
@@ -885,10 +936,18 @@ body {
         align-items: center;
 
         &-slide {
-          align-self: center;
           display: flex;
-          align-items: center;
           justify-content: center;
+          align-items: center;
+          padding: 1.9rem 1.5rem;
+          border: 1px solid #DCE0E0;
+          width: auto;
+          height: auto;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
         }
 
         &-button-prev,
@@ -1143,6 +1202,7 @@ body {
           font-size: 4rem;
           margin-top: 0.5rem;
           margin-bottom: 0.5rem;
+          color: #004274;
         }
         p {
           font-size: 1.8rem;
@@ -1222,6 +1282,7 @@ body {
       .certi p {
         font-size: 1.3rem !important;
       }
+      
     }
   }
 
@@ -1297,6 +1358,10 @@ body {
       }
       .certi1 div p {
         font-size: 1.2rem;
+      }
+      .certi1 {
+        display: flex;
+        gap: 1.6rem;
       }
     }
   }

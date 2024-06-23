@@ -23,9 +23,6 @@
   font-family: "OriginFont", sans-serif;
 }
 
-body {
-  margin: 0;
-}
 body .header {
   background-image: url("../assets/header.png");
   background-size: cover;
