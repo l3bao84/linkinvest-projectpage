@@ -1177,6 +1177,8 @@ body .get-infor .get-infor-container .email input::placeholder {
   color: black;
 }
 body .get-infor .get-infor-container .email .img-border {
+  border: none;
+  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
